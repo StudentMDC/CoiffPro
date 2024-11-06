@@ -838,9 +838,9 @@ i:hover,
   background-size: cover;
   background-position: center;
 }
-
-
-
+.owl-carousel .owl-stage-outer  {
+  overflow: visible !important;
+}
 #testimonials h2 {
   font-size: 2.5em;
   color: #fff;
