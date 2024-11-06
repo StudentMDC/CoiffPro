@@ -174,10 +174,10 @@ input:focus {
 @keyframes up-and_down_media {
   0%,
   100% {
-    top: 88%;
+    top: 85%;
   }
   50% {
-    top: 86%;
+    top: 83%;
   }
 }
 /* END Animations --------------------------------------------*/
@@ -354,7 +354,7 @@ header nav .form .fa-bars {
 }
 .landing .buttons {
   position: absolute;
-  top: 68%;
+  top: 65%;
   left: 50%;
   transform: translateX(-50%);
   column-gap: 48px;
@@ -395,7 +395,7 @@ header nav .form .fa-bars {
 /* Small Screens */
 @media (max-width: 768px) {
   .fa-angles-down {
-    top: 88%;
+    top: 85%;
     animation: up-and_down_media 1s linear infinite;
   }
 }
@@ -736,7 +736,7 @@ i:hover,
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 80%;
+    width: 100%;
     padding: 12px 40px;
     height: 40px;
     border-radius: 999px;
