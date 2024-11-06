@@ -1398,6 +1398,11 @@ i:hover,
   grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   gap: 40px;
 }
+@media (max-width: 767px) {
+  .footer .container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
 .footer .box h3 {
   color: white;
   font-size: 50px;
