@@ -822,9 +822,9 @@ i:hover,
 }
 /* END Discover --------------------------------------------*/
 
+
 /*start testimonials */
-/* Basic styling for sections */
-/* Basic styling for sections */
+/* Testimonials Section Styling */
 .testimonials {
   min-height: 100vh;
   display: flex;
@@ -834,10 +834,12 @@ i:hover,
   color: white;
   text-align: center;
   padding: 40px;
-  background-image: url("../imgs/bgdone\ (1).jpg"); /* Add a background image if needed */
+  background-image: url("../imgs/bgdone (1).jpg");
   background-size: cover;
   background-position: center;
 }
+
+
 
 #testimonials h2 {
   font-size: 2.5em;
@@ -850,75 +852,114 @@ i:hover,
   color: #bbb;
   margin-bottom: 50px;
   font-family: "Poppins", serif;
-  max-width: 600px; /* Adjust this value to fit your layout */
-  line-height: 1.5; /* Adjust line spacing for better readability */
-  overflow-wrap: break-word; /* Allow breaking long words if necessary */
-  white-space: normal; /* Allow normal wrapping of text */
+  max-width: 600px;
+  line-height: 1.5;
 }
 
 /* Carousel container */
 .testimonials-container {
-  display: flex; /* Flexbox for carousel */
-  justify-content: center; /* Center the carousel */
-  gap: 20px; /* Space between items */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensure that cards wrap correctly */
 }
 
 /* Testimonial Card */
 .testimonial-card {
+  display: inline-block;
   background-color: #fff;
   color: #111;
   border-radius: 17px;
   padding: 20px;
-  width: 300px; /* Fixed width for cards */
+  width: 309px;
+  height: 260px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  transition: transform 0.3s; /* Smooth scaling on hover */
+  transition: transform 0.3s;
+  margin-bottom: 20px; /* Add space between cards */
 }
 
-/* Testimonial Card Hover Effect */
+/* Responsive styles */
+@media (max-width: 768px) {
+  .testimonial-card {
+    width: 90%; /* Make card take more space on mobile */
+    height: auto; /* Auto height based on content */
+    margin: 0 auto; /* Center the card */
+  }
+}
+
 .testimonial-card:hover {
-  transform: scale(1.05); /* Slightly enlarge card on hover */
+  transform: scale(1.05);
+}
+
+/* Header with profile, name, role, and rating */
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 /* Profile Image */
 .profile-img {
-  width: 72px;
-  height: 72px;
+  width: 50px !important;
+  height: 50px !important;
   border-radius: 50%;
-  margin-bottom: 15px;
+  margin-right: 10px;
+  object-fit: cover;
 }
 
-/* Rating */
+/* Profile Details (Name and Role) */
+.profile-details h3 {
+  margin: 0 !important;
+  font-weight: bold;
+}
+
+.profile-details .role {
+  font-size: 0.9em;
+  color: #777;
+  margin: 0;
+}
+
+/* Rating aligned to the right */
 .rating {
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: #ffa033;
-  margin-bottom: 15px;
+  margin-left: auto;
+  margin-top: 25px;
+}
+
+.testimonial-card h4 {
+  font-weight: bold;
+}
+
+.testimonial-card p {
+  font-size: small;
+  color: #000000 !important;
+  font-size: 11px;
 }
 
 /* Carousel Navigation Dots */
 .owl-dots {
-  display: flex; /* Flexbox for dot alignment */
-  justify-content: center; /* Center dots */
+  display: flex;
+  justify-content: center;
 }
 
 .owl-dots .owl-dot {
-  height: 12px; /* Dot height */
-  width: 12px; /* Dot width */
-  margin: 0 5px; /* Space between dots */
-  background: #bbb; /* Dot background color */
-  border-radius: 50%; /* Circular dots */
-  transition: background 0.3s; /* Smooth transition on hover */
-  cursor: pointer; /* Change cursor on hover */
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background: #bbb;
+  border-radius: 50%;
+  transition: background 0.3s;
+  cursor: pointer;
 }
 
-/* Active Dot Style */
 .owl-dots .owl-dot.active {
-  background: #ffa033; /* Active dot color */
+  background: #8f1f1f;
 }
 
 /* Dot Hover Effect */
 .owl-dots .owl-dot:hover {
-  background: #525252; /* Change color on hover */
+  background: #525252;
 }
 
 /* Styling for testimonials navigation */
@@ -926,11 +967,13 @@ i:hover,
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px; /* Space above the navigation */
+  margin-top: 100px;
 }
 
-/* Support section */
-@import url("https://fonts.googleapis.com/css2?family=Alice&family=Poppins:wght@400;600&display=swap");
+
+
+/* END TESTIMONIALS */
+
 /* Support section */
 .support-container {
   display: flex;
@@ -939,16 +982,21 @@ i:hover,
   gap: 60px;
   margin-top: 80px;
   min-height: 100vh;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .support-info,
 .support-form {
   width: 44%;
+  box-sizing: border-box;
 }
 
 .support-info {
   padding-left: 158px;
   line-height: 1.8;
+  text-align: left;
 }
 
 .support-info h2 {
@@ -969,7 +1017,6 @@ i:hover,
   display: flex;
   align-items: center;
   color: #000000;
-
   margin-bottom: 15px;
 }
 
@@ -989,15 +1036,15 @@ i:hover,
 }
 
 .support-info i {
-  color: #8f1f1f; /* Updated color for social media icons */
+  color: #8f1f1f;
   font-weight: bold;
 }
 
 .support-form label {
   display: block;
   margin-top: 10px;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif; /* Apply Poppins font to labels */
+
+  font-family: "Poppins", sans-serif;
   color: black;
 }
 
@@ -1012,7 +1059,7 @@ i:hover,
 }
 
 .support-form button {
-  background-color: #8f1f1f; /* Updated button background color */
+  background-color: #8f1f1f;
   color: white;
   padding: 10px;
   border: none;
@@ -1023,8 +1070,163 @@ i:hover,
 }
 
 .support-form button:hover {
-  background-color: #a52a2a; /* You may want to adjust this if needed */
+  background-color: #a52a2a;
 }
+
+/* Media Queries for Smaller Screens */
+
+/* Tablet and Small Devices */
+@media (max-width: 1024px) {
+  .support-container {
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .support-info,
+  .support-form {
+    width: 100%;
+  }
+
+  .support-info {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .support-info h2 {
+    font-size: 1.8em;
+  }
+
+  .support-info p,
+  .support-form label {
+    font-size: 1em;
+  }
+
+  .support-info .social-link {
+    display: inline-flex;
+    justify-content: center;
+    gap: 10px;
+    width: auto;
+  }
+
+  .support-info .social-link a {
+    display: none;
+  }
+
+  .support-info .social-link i {
+    font-size: 1.3em;
+  }
+
+  /* Social Media Icons for Small Devices */
+  .social-icons-mobile {
+    display: none; /* Hide by default */
+    text-align: center;
+    gap: 20px;
+  }
+
+  .social-icons-mobile i {
+    font-size: 1.5em;
+    color: #8f1f1f;
+    margin: 10px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .support-container {
+    padding: 20px;
+    gap: 20px;
+    flex-direction: column;
+
+  }
+
+  .support-info,
+  .support-form {
+    width: 100%;
+  }
+
+  .support-info h2 {
+    font-size: 1.5em;
+  }
+
+  .support-info p,
+  .support-form label {
+    font-size: 0.9em;
+  }
+
+  .support-info .social-link {
+    display: inline-flex;
+    justify-content: center;
+    gap: 10px;
+    width: auto;
+  }
+
+  .support-info .social-link a {
+    display: none;
+  }
+
+  .support-info .social-link i {
+    font-size: 1.2em;
+  }
+
+  /* Show Social Icons below the form on mobile */
+  .social-icons-mobile {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px; /* Adds space between the form and icons */
+  }
+
+  .social-icons-mobile i {
+    font-size: 1.3em; /* Larger icons for mobile */
+    margin: 0 10px;
+  }
+
+  .support-form button {
+    font-size: 0.9em;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .support-container {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .support-info h2 {
+    font-size: 1.3em;
+  }
+
+  .support-info p,
+  .support-form label {
+    font-size: 0.85em;
+  }
+
+  .support-info .social-link i {
+    font-size: 1.1em;
+  }
+
+  .support-form input,
+  .support-form textarea {
+    font-size: 0.9em;
+  }
+
+  .support-form button {
+    font-size: 0.8em;
+  }
+}
+/* Hide email and social media info on small screens */
+@media (max-width: 768px) {
+  .support-info p:nth-child(1),
+  .support-info p:nth-child(3),
+  .support-info p:nth-child(4),
+  .support-info p:nth-child(5),
+
+  .support-info .social-link {
+    display: none;
+  }
+}
+
 
 /* Back to top button */
 .back-to-top {
@@ -1039,7 +1241,6 @@ i:hover,
   font-size: 20px;
   text-align: center;
 }
-
 /* FAQ SECTION START */
 .faq-container {
   background-color: #000; /* Black background */
@@ -1049,16 +1250,12 @@ i:hover,
   text-align: center;
 }
 
-/* FAQ Header Styling */
-/* .faq-header {
-  max-width: 800px;
-  margin: 0 auto 20px;
-} */
-
+/* FAQ Content Flex Layout */
 .faq-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap; /* Ensures responsive layout */
 }
 
 .logo-container {
@@ -1066,6 +1263,7 @@ i:hover,
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+  margin-top: 20px;
 }
 
 .coiffpro-logo {
@@ -1073,27 +1271,10 @@ i:hover,
   height: auto;
 }
 
-/* FAQ Title Styling */
-.faq-title {
-  font-size: 2.5em;
-  color: white;
-  font-family: "Alice", sans-serif;
-}
-
-/* FAQ Description Styling */
-/* .faq-description {
-  max-width: 520px;
-  margin: 10px auto 20px;
-  font-size: 15px;
-  line-height: 1.5;
-  overflow-wrap: break-word;
-} */
-
 /* FAQ Item Styling */
 .faq-item {
   background-color: #ffffff;
   color: #000;
-
   margin-left: 80px;
   margin-bottom: 15px;
   padding: 15px;
@@ -1135,7 +1316,47 @@ i:hover,
   transform: rotate(180deg);
 }
 
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .faq-content {
+    flex-direction: column; /* Stacks the FAQ content and logo vertically on smaller screens */
+    text-align: left; /* Ensures text aligns left for readability */
+  }
+
+  .faq-item {
+    margin-left: 0; /* Remove left margin */
+    margin-right: 20px; /* Add right margin for spacing */
+    width: 100%; /* Make FAQ items full width on mobile */
+  }
+
+  .logo-container {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .coiffpro-logo {
+    width: 80%; /* Make the logo responsive to fit smaller screens */
+    max-width: 500px; /* Prevent the logo from becoming too large */
+  }
+}
+
+/* Desktop Large Screen */
+@media (min-width: 769px) {
+  .faq-content {
+    flex-direction: row; /* Keeps FAQ content and logo side by side on larger screens */
+  }
+
+  .logo-container {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+}
+
 /* FAQ SECTION END */
+
+
+
 
 /* Back to Top Button */
 .back-to-top {
@@ -1275,6 +1496,9 @@ i:hover,
 .left-panel {
   max-width: 50%;
 }
+.social-icons {
+  gap: 50px; /* Increase spacing between icons */
+}
 /* Adjustments for smaller screens */
 @media (max-width: 800px) {
   .left-panel img{
@@ -1286,10 +1510,128 @@ i:hover,
       height: 149px;
       object-fit: cover;
   }
+  .social-icons {
+    gap: 15px;
+  }
   .right-panel {
       padding: 4rem 1rem; /* Increase padding for mobile devices */
   }
 }
 
 
+
+.social-icons a {
+  font-size: 3rem; /* Make icons larger */
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Circular shape */
+  background-color: white; /* White background */
+  color: #8f1f1f; /* Icon color */
+  transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+.social-icons a:hover {
+  transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+.name-fields {
+  display: flex;
+  gap: 1rem; /* Space between First Name and Last Name */
+}
+
+.name-input {
+  flex: 1; /* Make each input take up equal width */
+  
+}
+        /* Custom Input Styles */
+        .custom-input {
+          background-color: #C5C5C5;
+          color: black;
+          width: 100%;
+          padding: 0.5rem 1rem;
+          border-radius: 0.375rem;
+          border: 1px solid #D1D5DB; /* Light gray border */
+          outline: none;
+      }
+
+      /* Placeholder Styling */
+      .custom-input::placeholder {
+          color: black;
+      }
+/* Custom Input Styles */
+.custom-input,
+.name-input {
+    background-color: #C5C5C5;
+    color: black;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    border: 1px solid #D1D5DB; /* Light gray border */
+    outline: none;
+}
+
+.custom-input:focus,
+.name-input:focus {
+    border-color: #A0AEC0; /* Darker gray border when focused */
+    box-shadow: 0 0 0 1px #4A90E2; /* Blue border on focus */
+}
+
+/* Placeholder Text Style */
+.custom-input::placeholder,
+.name-input::placeholder {
+    color: black; /* Black placeholder text */
+}
+
+.custom-input:focus {
+  border-color: #010101; /* Darker gray border when focused */
+  box-shadow: 0 0 0 1px #0d0d0e; /* Blue border on focus */
+}
+
+
+/* Custom CSS for the password input */
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 2.5rem; /* To make room for the eye icon */
+  color: black; /* Make sure the text is visible */
+}
+
+.eye-icon {
+  position: absolute;
+  top: 56%;
+  right: 1rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  margin-top: 5px; /* Add margin top to move the icon down slightly */
+}
+
+
+
 /* END Signup */
+
+
+ /* Back Arrow Styles */
+.back-arrow {
+  font-size: 24px; /* Adjust size */
+  color: black; /* Arrow color */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+.back-arrow:hover {
+  color: #4A90E2; /* Change to blue or any color on hover */
+}
+
+/* Font Awesome */
+.fas {
+  font-family: 'Font Awesome 5 Free'; /* Ensure you're using the correct font for Font Awesome icons */
+  font-weight: 900;
+}

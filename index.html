@@ -47,9 +47,15 @@
       href="https://fonts.googleapis.com/css2?family=Alice&family=Karantina:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-        <!-- Include Owl Carousel CSS -->
+    <!-- Include Owl Carousel CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha384-m5bT+p+2WVv9M7zG7CnD+mLt7pyo6QLpHUlEl3D22Gx7+X7qj5+ri5GHx4Z4LEa2" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha384-uh2n8M01nRjx7cW7Tx6j3q3hfEEoA58cH98oxjEsmB2S6M6ueVS3FQg41oH+IQQd" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
   </head>
   <body>
 
@@ -274,7 +280,7 @@
                 <img decoding="async" src="imgs/mask.jpg" alt="" />
               </div>
               <div class="flex content">
-                <img  class="flex-grow" src="imgs/logo1.jpg" alt="" />
+                <img src="imgs/logo1.jpg" alt="" />
                 <div class="flex-column text-left">
                   <h3 class="fs-18 raleway-bold">Salon-Quality Hair Curling...</h3>
                   <p class="fs-12 raleway-bold">bob the barber</p>
@@ -294,7 +300,7 @@
                 <img decoding="async" src="imgs/FAC.jpg" alt="" />
               </div>
               <div class="flex content">
-                <img  class="flex-grow" src="imgs/logo2.jpg" alt="" />
+                <img src="imgs/logo2.jpg" alt="" />
                 <div class="flex-column text-left">
                   <h3 class="fs-18 raleway-bold">Salon-Quality Hair Curling...</h3>
                   <p class="fs-12 raleway-bold">bob the barber</p>
@@ -314,7 +320,7 @@
                 <img decoding="async" src="imgs/shampoo.jpg" alt="" />
               </div>
               <div class="flex content">
-                <img  class="flex-grow" src="imgs/logo4.jpg" alt="" />
+                <img src="imgs/logo4.jpg" alt="" />
                 <div class="flex-column text-left">
                   <h3 class="fs-18 raleway-bold">Salon-Quality Hair Curling...</h3>
                   <p class="fs-12 raleway-bold">bob the barber</p>
@@ -334,7 +340,7 @@
                 <img decoding="async" src="imgs/1.jpg" alt="" />
               </div>
               <div class="flex content">
-                <img  class="flex-grow" src="imgs/logo1.jpg" alt="" />
+                <img src="imgs/logo1.jpg" alt="" />
                 <div class="flex-column text-left">
                   <h3 class="fs-18 raleway-bold">Salon-Quality Hair Curling...</h3>
                   <p class="fs-12 raleway-bold">bob the barber</p>
@@ -354,107 +360,174 @@
       </div>
     </div>
     <!-- END Discover -->
-    <!-- START Testimonials -->
-    <div id="testimonials" class="testimonials">
-      <h2 class="special-heading">testimonials</h2>
-      <p>Find out what our clients think about the service they received from us, let us know what you think by rating us on the play store and app store.</p>
-      
-      <!-- Carousel container -->
-      <div class="owl-carousel testimonials-container">
-          <div class="testimonial-card">
-              <img src="imgs/testi.png" alt="Leo's Profile" class="profile-img">
-              <h3>Leo</h3>
-              <span class="role">Lead Designer</span>
-              <div class="rating">★★★★☆</div>
-              <h4>It was a very good experience</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-          </div>
-
-          <div class="testimonial-card">
-              <img src="imgs/testi.png" alt="Alex's Profile" class="profile-img">
-              <h3>Alex</h3>
-              <span class="role">Project Manager</span>
-              <div class="rating">★★★★★</div>
-              <h4>Amazing service!</h4>
-              <p>Quisque nec nunc non eros suscipit facilisis.</p>
-          </div>
-
-          <div class="testimonial-card">
-              <img src="imgs/testi.png" alt="Sam's Profile" class="profile-img">
-              <h3>Sam</h3>
-              <span class="role">Developer</span>
-              <div class="rating">★★★★☆</div>
-              <h4>Highly recommended</h4>
-              <p>Proin gravida nibh vel velit auctor aliquet.</p>
-          </div>
-
     
 
+    <!-- START Testimonials -->
 
+    <div id="testimonials" class="testimonials">
+      <h2 class="special-heading">testimonials</h2>
+      <p>Find out what our clients think about the service they received from us. Let us know what you think by rating us on the Play Store and App Store.</p>
+
+      <!-- Carousel container -->
+      <div class="owl-carousel testimonials-container">
+        <!-- Six testimonial cards for demonstration -->
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="imgs/testi.png" alt="Profile Image" class="profile-img">
+            <div class="profile-details text-left">
+              <h3>Leo</h3>
+              <span class="role">Lead Designer</span>
+            </div>
+            <div class="rating">★★★★☆</div>
+          </div>
+          <h4>It was a very good experience</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam necessitatibus excepturi eum magnam sequi, expedita modi iste. Dolore consequuntur tenetur quas tempora eum totam illum error, veniam neque, illo itaque autem, asperiores delectus labore et!</p>
+        </div>
+        
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="imgs/testi.png" alt="Profile Image" class="profile-img">
+            <div class="profile-details text-left">
+              <h3>Leo</h3>
+              <span class="role">Lead Designer</span>
+            </div>
+            <div class="rating">★★★★☆</div>
+          </div>
+          <h4>It was a very good experience</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam necessitatibus excepturi eum magnam sequi, expedita modi iste. Dolore consequuntur tenetur quas tempora eum totam illum error, veniam neque, illo itaque autem, asperiores delectus labore et!</p>
+        </div>
+        
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="imgs/testi.png" alt="Profile Image" class="profile-img">
+            <div class="profile-details text-left">
+              <h3>Leo</h3>
+              <span class="role">Lead Designer</span>
+            </div>
+            <div class="rating">★★★★☆</div>
+          </div>
+          <h4>It was a very good experience</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam necessitatibus excepturi eum magnam sequi, expedita modi iste. Dolore consequuntur tenetur quas tempora eum totam illum error, veniam neque, illo itaque autem, asperiores delectus labore et!</p>
+        </div>
+        
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="imgs/testi.png" alt="Profile Image" class="profile-img">
+            <div class="profile-details text-left">
+              <h3>Leo</h3>
+              <span class="role">Lead Designer</span>
+            </div>
+            <div class="rating">★★★★☆</div>
+          </div>
+          <h4>It was a very good experience</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam necessitatibus excepturi eum magnam sequi, expedita modi iste. Dolore consequuntur tenetur quas tempora eum totam illum error, veniam neque, illo itaque autem, asperiores delectus labore et!</p>
+        </div>
+        
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="imgs/testi.png" alt="Profile Image" class="profile-img">
+            <div class="profile-details text-left">
+              <h3>Leo</h3>
+              <span class="role">Lead Designer</span>
+            </div>
+            <div class="rating">★★★★☆</div>
+          </div>
+          <h4>It was a very good experience</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam necessitatibus excepturi eum magnam sequi, expedita modi iste. Dolore consequuntur tenetur quas tempora eum totam illum error, veniam neque, illo itaque autem, asperiores delectus labore et!</p>
+        </div>
+        
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="imgs/testi.png" alt="Profile Image" class="profile-img">
+            <div class="profile-details text-left">
+              <h3>Leo</h3>
+              <span class="role">Lead Designer</span>
+            </div>
+            <div class="rating">★★★★☆</div>
+          </div>
+          <h4>It was a very good experience</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam necessitatibus excepturi eum magnam sequi, expedita modi iste. Dolore consequuntur tenetur quas tempora eum totam illum error, veniam neque, illo itaque autem, asperiores delectus labore et!</p>
+        </div>
+        
       </div>
+
+      <!-- Custom Navigation -->
       <div class="testimonial-navigation">
         <button class="owl-prev"><i class="fas fa-chevron-left"></i></button>
         <div class="owl-dots">
-            <!-- Create 6 dots -->
-            <button class="owl-dot"></button>
-            <button class="owl-dot"></button>
-            <button class="owl-dot"></button>
-            <button class="owl-dot"></button>
-            <button class="owl-dot"></button>
-            <button class="owl-dot"></button>
+          <button class="owl-dot"></button>
+          <button class="owl-dot"></button>
+          <button class="owl-dot"></button>
+          <button class="owl-dot"></button>
+          <button class="owl-dot"></button>
+          <button class="owl-dot"></button>
         </div>
         <button class="owl-next"><i class="fas fa-chevron-right"></i></button>
       </div>
     </div>
     <!-- END Testimonials -->
+
     <!-- START Support -->
-    <div id="support"  class="support-container">
+    <div id="support" class="support-container">
       <div class="support-info">
-          <h2>SUPPORT</h2>
-          <p>Contact our support team if you have any doubts or questions about our service.</p>
-          <p><strong>Email</strong></p>
-          <p>coiffpro@gmail.com</p>
-          <p><strong>Socials</strong></p>
-          <div class="social-link">
-              <i class="fab fa-instagram"></i>
-              <a href="#">Instagram</a>
-          </div>
-          <div class="social-link">
-              <i class="fab fa-x-twitter"></i> <!-- Updated icon for Twitter (X) -->
-              <a href="#">Twitter</a>
-          </div>
-          <div class="social-link">
-              <i class="fab fa-facebook"></i>
-              <a href="#">Facebook</a>
-          </div>
+        <h2>SUPPORT</h2>
+        <p>Contact our support team if you have any doubts or questions about our service.</p>
+        <p><strong>Email</strong></p>
+        <p>coiffpro@gmail.com</p>
+        <p><strong>Socials</strong></p>
+        <div class="social-link">
+          <i class="fab fa-instagram"></i>
+          <a href="#">Instagram</a>
+        </div>
+        <div class="social-link">
+          <i class="fab fa-x-twitter"></i> <!-- Updated icon for Twitter (X) -->
+          <a href="#">Twitter</a>
+        </div>
+        <div class="social-link">
+          <i class="fab fa-facebook"></i>
+          <a href="#">Facebook</a>
+        </div>
       </div>
 
       <div class="support-form">
-          <form action="#" method="post">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your name..." required>
-              
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Your email..." required>
-              
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" placeholder="Your message..." required></textarea>
-              
-              <button type="submit">Submit</button>
-          </form>
+        <form action="#" method="post">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name..." required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your email..." required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Your message..." required></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
       </div>
+
+      <!-- Social Media Icons for Small Devices -->
+      <div class="social-icons-mobile">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-x-twitter"></i>
+        <i class="fab fa-facebook"></i>
+    </div>
     </div>
     <!-- END Support -->
+
     <!-- START FAQ -->
     <div id="faq" class="faq-container">
       <div class="faq-header">
-        <h2 class="special-heading text-white">FAQ</h2>
+        <h2 class="special-heading text-white">faq</h2>
         <p class="faq-description">
           Have Questions? We’ve Got You Covered! Explore Our Frequently Asked Questions To Find Quick Answers About Bookings, Services, Payments, And More. If You Don’t See What You’re Looking For, Feel Free To Contact Us Directly!
         </p>
       </div>
       <div class="faq-content">
-        <div class="faq-questions">
+        <div class="faq-questions mt--10">
           <div class="faq-item">
             <div class="faq-question">
               How can I make a reservation?
@@ -491,6 +564,7 @@
       </div>
     </div> 
     <!-- END FAQ-->
+
     <!-- Start Footer -->
     <div class="footer">
       <div class="container">
@@ -562,24 +636,66 @@
     <!-- Back to Top Button -->
     <div class="back-to-top"><i class="fas fa-arrow-up"></i></div>
       <!-- Custom pagination and navigation -->
-    
     </div>
 
     <!-- Include jQuery and Owl Carousel JS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha384-p2pDRyE7A6b43mCCTEERyMyRCTr9iFHEeI0GElcC/supcsn/OpdW+jPY+jCBGViY" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
       $(document).ready(function(){
-        $(".owl-carousel").owlCarousel({
-          items: 3, // Number of items to show
-          loop: true, // Infinite loop
-          margin: 10, // Space between items
-          nav: true, // Show next and prev buttons
-          dots: true // Show dots for navigation
+        // Initialize the carousel
+        const carousel = $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 20,
+          items: 3,  // Default: 3 items per slide (on larger screens)
+          dots: false, // Disable default dots
+          nav: false,   // Remove OwlCarousel's default navigation arrows
+          responsive: {
+            0: { items: 1 },   // Mobile: 1 item per slide
+            480: { items: 1 },   // Larger phones: 1 item per slide
+            600: { items: 1 },         
+            768: { items: 2 }, // Tablet: 2 items per slide
+            1000: { items: 3 } // Desktop: 3 items per slide
+          }
+        });
+        // Ensure the carousel updates on resize
+        $(window).resize(function() {
+          carousel.trigger('refresh.owl.carousel');
+        });
+    
+        // Custom Previous Button
+        $(".owl-prev").click(function() {
+          carousel.trigger('prev.owl.carousel');
+        });
+    
+        // Custom Next Button
+        $(".owl-next").click(function() {
+          carousel.trigger('next.owl.carousel');
+        });
+    
+        // Custom Dots
+        $(".owl-dot").click(function() {
+          var index = $(this).index();
+          carousel.trigger('to.owl.carousel', [index]);
+          $(".owl-dot").removeClass("active");
+          $(this).addClass("active");
+        });
+    
+        // Set the first dot as active by default
+        $(".owl-dot").first().addClass("active");
+    
+        // Update custom dots on carousel change
+        carousel.on('changed.owl.carousel', function(event) {
+          var index = event.item.index - event.relatedTarget._clones.length / 2;
+          index = (index % event.item.count + event.item.count) % event.item.count;
+          $(".owl-dot").removeClass("active");
+          $(".owl-dot").eq(index).addClass("active");
         });
       });
-      </script>
+    </script>
+    
+    
+    
     <script src="js/main.js"></script>
-
   </body>
 </html>
