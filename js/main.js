@@ -107,9 +107,14 @@ function updatePosition(slider, lowerHandle, upperHandle, lowerDisplay, upperDis
 
 // Drag event handler for each slider
 function handleDrag(event, handle, slider, isUpperHandle, lowerValue, upperValue, updateValuesCallback) {
-  function onMouseMove(e) {
+  event.preventDefault();  // Prevent default behavior, especially for touch events
+  const moveEvent = event.type === "touchstart" ? "touchmove" : "mousemove";
+  const endEvent = event.type === "touchstart" ? "touchend" : "mouseup";
+  
+  function onMove(e) {
+    const clientX = e.type === "touchmove" ? e.touches[0].clientX : e.clientX;
     const rect = slider.getBoundingClientRect();
-    const offset = e.clientX - rect.left;
+    const offset = clientX - rect.left;
     const newValue = calculatePrice(
       Math.min(Math.max(offset, 0), slider.clientWidth),
       isUpperHandle,
@@ -129,14 +134,15 @@ function handleDrag(event, handle, slider, isUpperHandle, lowerValue, upperValue
     }
   }
 
-  function onMouseUp() {
-    document.removeEventListener("mousemove", onMouseMove);
-    document.removeEventListener("mouseup", onMouseUp);
+  function onEnd() {
+    document.removeEventListener(moveEvent, onMove);
+    document.removeEventListener(endEvent, onEnd);
   }
 
-  document.addEventListener("mousemove", onMouseMove);
-  document.addEventListener("mouseup", onMouseUp);
+  document.addEventListener(moveEvent, onMove);
+  document.addEventListener(endEvent, onEnd);
 }
+
 
 // Initialize slider event listeners and setup
 function initializeSlider(slider, lowerHandle, upperHandle, lowerDisplay, upperDisplay, initialLowerValue, initialUpperValue) {
@@ -148,13 +154,20 @@ function initializeSlider(slider, lowerHandle, upperHandle, lowerDisplay, upperD
     upperValue = newUpperValue;
     updatePosition(slider, lowerHandle, upperHandle, lowerDisplay, upperDisplay, lowerValue, upperValue);
   }
-
+  // CHANGE
   lowerHandle.addEventListener("mousedown", (event) =>
+    handleDrag(event, lowerHandle, slider, false, lowerValue, upperValue, updateValuesCallback)
+  );
+  lowerHandle.addEventListener("touchstart", (event) =>
     handleDrag(event, lowerHandle, slider, false, lowerValue, upperValue, updateValuesCallback)
   );
   upperHandle.addEventListener("mousedown", (event) =>
     handleDrag(event, upperHandle, slider, true, lowerValue, upperValue, updateValuesCallback)
   );
+  upperHandle.addEventListener("touchstart", (event) =>
+    handleDrag(event, upperHandle, slider, true, lowerValue, upperValue, updateValuesCallback)
+  );
+  
 
   updatePosition(slider, lowerHandle, upperHandle, lowerDisplay, upperDisplay, lowerValue, upperValue);
 }
