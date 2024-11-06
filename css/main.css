@@ -524,7 +524,7 @@ i:hover,
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 5px;
   overflow-y: auto;
-  max-height: 400px;
+  max-height: 330px;
 }
 .discover .wrapper .info-section .boxes::-webkit-scrollbar {
   width: 8px;
