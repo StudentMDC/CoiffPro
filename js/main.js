@@ -191,6 +191,50 @@ filterIcon.addEventListener("click", (e) => {
   filter.style.left = "0";
 });
 
+// Gestion du filtre on click check *********************************************************************************************************
+document.querySelectorAll('.filter-box').forEach(filter => {
+  filter.addEventListener('click', function () {
+    // Add hidden to all images first
+    document.querySelectorAll('.filter-box img').forEach(i => 
+    {
+      i.setAttribute("hidden", true);
+      i.parentElement.classList.remove("filtered");
+    }
+    );
+    // Remove hidden from the selected one
+    filter.children[2].removeAttribute("hidden");
+    filter.classList.add("filtered");
+  });
+});
+
+// Gestion du filtre on click clear uncheck *********************************************************************************************************
+document.querySelectorAll('.clear').forEach(clr => {
+  clr.addEventListener('click', function () {
+    document.querySelectorAll('.filter-box img').forEach(i => 
+      {
+        i.setAttribute("hidden", true);
+        i.parentElement.classList.remove("filtered");
+      }
+      );
+    // Remove the red border from all images first
+    document.querySelectorAll('.img-services').forEach(i => i.classList.remove('selected'));
+    initializeSlider(slider1, lowerHandle1, upperHandle1, lowerPriceDisplay1, upperPriceDisplay1, lowerValue1, upperValue1);
+    initializeSlider(slider2, lowerHandle2, upperHandle2, lowerPriceDisplay2, upperPriceDisplay2, lowerValue2, upperValue2);
+
+  });
+});
+
+console.log(window.innerHeight);
+// Gestion de services **********************************************************************
+document.querySelectorAll('.img-services').forEach(img => {
+  img.addEventListener('click', function () {
+    // Remove the red border from all images first
+    document.querySelectorAll('.img-services').forEach(i => i.classList.remove('selected'));
+    // Add red border to clicked image
+    img.classList.add('selected');
+  });
+});
+
 // Show or hide the button based on scroll position*********************************************************************************************************
 const backToTopButton = document.querySelector(".back-to-top");
 
@@ -210,3 +254,4 @@ backToTopButton.addEventListener("click", function () {
     behavior: "smooth",
   });
 });
+
