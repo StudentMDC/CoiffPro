@@ -2,6 +2,9 @@
 .p10 {
   padding: 10px;
 }
+.gap--10 {
+  gap: 10px;
+}
 .text-main-color {
   color: var(--main-color);
 }
