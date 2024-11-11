@@ -141,6 +141,438 @@
         border-radius: 50%;
         object-fit: cover;
       }
+      /* Booking Content Styles */
+      .booking-content {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .appointments-sidebar {
+      width: 40%;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      /* No shadow here by default */
+    }
+
+    .appointments-sidebar.upcoming {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow only for upcoming appointments */
+    }
+
+    .appointments-sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #000000;
+    }
+
+    .appointment-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      box-shadow: 2px 0px rgba(173, 13, 13, 0.769), -5px -5px 10px rgba(255, 255, 255, 0.3); /* Soft light shadows for a 3D effect */
+      border-radius: 5px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    }
+
+
+    .appointment-item2 {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+    }
+    .appointment-item2 img {
+      width: 60px;
+      height: 60px;
+      margin-right: 15px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .appointment-item img {
+      width: 60px;
+      height: 60px;
+      margin-right: 15px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .appointment-info p {
+      margin: 5px 0;
+      color: #000000;
+    }
+
+    .booking-details {
+      width: 60%;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .booking-details .appointment-time {
+      font-size: 16px;
+      color: #000000;
+      margin-bottom: 10px;
+    }
+
+
+    .status {
+      padding: 5px 10px;
+      font-size: 14px;
+      border-radius: 5px;
+      color: #fff;
+    }
+
+    .status.confirmed {
+      background-color: #28a745;
+    }
+
+    .booking-summary {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 15px;
+    }
+
+    .booking-summary img {
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-right: 15px;
+    }
+
+    .booking-info p {
+      margin: 5px 0;
+      color: #000000;
+      font-size: 11px;
+    }
+
+    .action-buttons {
+      margin-top: 15px;
+      display: flex;
+      gap: 20px;
+      margin-left: 14px;
+    }
+
+    .action-buttons button {
+      background-color: #f5f5f5;
+      color: black;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+      font-size: 14px;
+      width: 80px; /* Adjust width for consistency */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .action-buttons button i {
+      font-size: 18px;
+      margin-bottom: 5px; /* Space between icon and text */
+    }
+
+    .action-buttons button span {
+      font-size: 12px; /* Smaller text size for the label */
+      color: rgb(0, 0, 0);
+    }
+
+
+    .action-buttons button:hover {
+      background-color: #8F1F1F;
+    }
+
+    .service-details,
+    .cancellation-policy {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .service-details p,
+    .cancellation-policy p {
+      margin: 5px 0;
+      color: #060606;
+    }
+
+    .cancellation-policy strong {
+      color: #0e0e0e;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 991px) {
+      .booking-content {
+        flex-direction: column;
+      }
+
+      .appointments-sidebar,
+      .booking-details {
+        width: 100%;
+      }
+    }
+    /* Style for the map card */
+    .map-card {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      background: #f1f1f1;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .map-container {
+          margin-top: 10px;
+        }
+
+    /* Base styles for reschedule popup */
+    .reschedule-popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8); /* Darker overlay for a more dramatic effect */
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    /* Reschedule content container */
+    .reschedule-content {
+        font-family: 'Alice', serif;
+        background: #ffffff;
+        padding: 35px;
+        border-radius: 15px;
+        width: 380px;
+        text-align: center;
+        box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.2); /* Outer shadow + subtle inner glow */
+        position: relative;
+        animation: fadeIn 0.5s ease-out; /* Smooth fade-in animation */
+        margin-top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%; /* Ensure it's responsive */
+    }
+
+    /* Decorative accent bar */
+    .reschedule-content::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70px;
+        height: 5px;
+        background: #8F1F1F; /* Decorative accent bar */
+        border-radius: 10px;
+    }
+
+    /* Heading style */
+    .reschedule-content h2 {
+        font-size: 22px;
+        color: #333;
+        margin-bottom: 20px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+    }
+
+    /* Input fields */
+    .reschedule-content input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #dcdcdc;
+        border-radius: 8px;
+        font-size: 16px;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Soft inner shadow for input */
+    }
+
+    /* Button styles */
+    .reschedule-content button {
+        padding: 12px 24px;
+        background-color: #8F1F1F;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 500;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-family: 'Alice', serif;
+    }
+
+    /* Button hover effect */
+    .reschedule-content button:hover {
+        background-color: #B42929; /* Slightly brighter for hover */
+    }
+
+    /* Media query for smaller screens (mobile devices) */
+    @media screen and (max-width: 768px) {
+        .reschedule-content {
+            width: 90%; /* Reduce width for smaller screens */
+            margin-top: 50px; /* Adjust the top margin for better positioning */
+            padding: 20px; /* Adjust padding for mobile */
+        }
+
+        .reschedule-content h2 {
+            font-size: 18px; /* Smaller font size for the title */
+        }
+
+        .reschedule-content input {
+            font-size: 14px; /* Adjust input field size */
+        }
+
+        .reschedule-content button {
+            padding: 10px 20px; /* Reduce button padding */
+            font-size: 14px; /* Smaller button text */
+        }
+    }
+
+        /* Cancel Confirmation Popup Styles */
+      .cancel-popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+
+      .cancel-content {
+      font-family: 'Alice', serif;
+      color: #000;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 15px;
+      width: 300px;
+      text-align: center; /* Centers text and inline elements */
+      box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+      display: flex; /* Make the container a flex container */
+      flex-direction: column; /* Stack the buttons vertically */
+      justify-content: center; /* Vertically center the buttons */
+      align-items: center; /* Horizontally center the buttons */
+    }
+
+    .cancel-content button {
+      margin: 10px 5px;
+      padding: 10px 15px;
+      font-family: 'Alice', serif;
+      font-size: 14px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+
+      .confirm-cancel {
+        background-color: #8F1F1F;
+        color: #000000;
+      }
+
+      .close-popup {
+        background-color: #ccc;
+        color: #000;
+      }
+
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: scale(0.9);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+        /* Responsive Styles */
+@media screen and (max-width: 768px) {
+
+
+
+
+  /* Adjust booking content layout */
+  .booking-content {
+    display: block; /* Stack elements vertically */
+  }
+
+  .appointments-sidebar,
+  .booking-details {
+    width: 100%; /* Full width for each section */
+    margin-bottom: 20px;
+  }
+
+  .cancel-content {
+    padding: 15px;
+    width: 100%;
+  }
+
+  /* Popup Styles */
+  .cancel-popup {
+    width: 80%;
+    padding: 15px;
+  }
+
+  /* Button styles */
+  .cancel-content button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .booking-details .action-buttons {
+    display: block;
+    text-align: center;
+  }
+
+  .booking-details .action-buttons button {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  /* Adjust text sizes */
+  h1, h2 {
+    font-size: 20px;
+  }
+
+  .booking-info p {
+    font-size: 14px;
+  }
+}
+
+/* For even smaller screens like mobile phones */
+@media screen and (max-width: 480px) {
+  .content {
+    padding: 10px;
+  }
+
+  .booking-details .action-buttons button {
+    padding: 10px;
+  }
+
+  .cancel-content {
+    padding: 10px;
+  }
+}
+
+
+
     </style>
   </head>
   <body>
@@ -204,69 +636,164 @@
         </div>
         <!-- /END Head -->
         <h1 class="alice-regular p-relative ml-15">My Booking History</h1>
-        <div class="poppins-regular wrapper d-grid gap-20">
-          <!-- START Welcome Widget -->
-          <div class="reviews">
-            <p>
-              Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-              Mauris blandit aliquet elit, eget tincidunt.
-            </p>
-            <div class="content">
-              <img decoding="async" src="imgs/elon.jpg" alt="" />
-              <div class="text">
-                Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-                Mauris blandit aliquet elit, eget tincidunt.
-                <p>on: bob the barber <span class="rating">★★★★☆</sp></p>
+        <div class="poppins-regular  d-grid gap-20">
+          <!-- Main Content -->
+        <div class="booking-content">
+          <!-- Left Sidebar with Upcoming and Past Appointments -->
+          <div class="appointments-sidebar">
+            <h2>Upcoming appointments</h2>
+            <div class="appointment-item">
+              <img src="imgs/logo.jpg" alt="Vurve - Bangalore" class="appointment-logo">
+              <div class="appointment-info">
+                <p id="appointment-time">Sun 17 November 2024 at 5:00pm</p>
+                <p><strong>Vurve - The Bond</strong></p>
+                <p>Haircut - Premier Stylist</p>
               </div>
             </div>
-            <div class="content">
-              <img decoding="async" src="imgs/elon.jpg" alt="" />
-              <div class="text">
-                Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-                Mauris blandit aliquet elit, eget tincidunt.
-                <p>on: bob the barber <span class="rating">★★★★☆</sp></p>
-              </div>
-            </div>
-          </div>
-          <div class="reviews">
-            <p class="vh">
-              Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-              Mauris blandit aliquet elit, eget tincidunt.
-            </p>
-            <div class="content">
-              <img decoding="async" src="imgs/elon.jpg" alt="" />
-              <div class="text">
-                Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-                Mauris blandit aliquet elit, eget tincidunt.
-                <p>on: bob the barber <span class="rating">★★★★☆</sp></p>
-              </div>
-            </div>
-            <div class="content">
-              <img decoding="async" src="imgs/elon.jpg" alt="" />
-              <div class="text">
-                Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-                Mauris blandit aliquet elit, eget tincidunt.
-                <p>on: bob the barber <span class="rating">★★★★☆</sp></p>
+
+            <h2>Past appointments</h2>
+            <div class="appointment-item2">
+              <img src="imgs/logo.jpg" alt="Vurve - Bangalore" class="appointment-logo">
+              <div class="appointment-info">
+                <p>Monday 4 november 2024 at 5:00pm</p>
+                <p><strong>Vurve - The Bond</strong></p>
+                <p>Haircut - Premier Stylist</p>
               </div>
             </div>
           </div>
-          <!-- START Welcome Widget -->
+
+          <!-- Right Detailed Booking Section -->
+          <div class="booking-details">
+            <p class="appointment-time" id="appointment-time-details">Sun 17 November 2024 at 5:00pm</p>
+            <span class="status confirmed">
+              <i class="fa-solid fa-check-circle"></i> Confirmed
+            </span>
+            
+            <div class="booking-summary">
+              <img src="imgs/logo.jpg" alt="Vurve - The Bond" class="booking-logo">
+              <div class="booking-info">
+                <p><strong>Vurve - The Bond</strong></p>
+                <p>Maarif,Casablanca </p>
+                <p>Booking ref: # 65742695</p>
+              </div>
+              <div class="action-buttons">
+                <button onclick="openMap()">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Directions</span>
+                </button>
+                <button id="reschedule-btn">
+                  <i class="fa-solid fa-calendar-alt"></i>
+                  <span>Reschedule</span>
+                </button>
+                
+
+                <!-- Your Cancel Button -->
+                <button class="cancel-button">
+                  <i class="fa-solid fa-times"></i>
+                  <span>Cancel</span>
+                </button>
+                <!-- Cancel Confirmation Popup -->
+                <div class="cancel-popup">
+                  <div class="cancel-content">
+                    <p>Are you sure you want to cancel this appointment?</p>
+                    <button class="confirm-cancel">Yes, Cancel</button>
+                    <button class="close-popup">No, Keep</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="service-details">
+              <p><strong>Haircut - Premier Stylist</strong> <span>1h</span></p>
+              <p><strong>Taxes</strong> <span>MAD 0</span></p>
+              <p><strong>Total</strong> <span>MAD 50</span></p>
+            </div>
+
+            <div class="cancellation-policy">
+              <p><strong>Cancellation policy</strong></p>
+              <p>Cancel for free anytime in advance, otherwise you will be charged <strong>100%</strong> of the service price for not showing up.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Directions Map Card -->
+      <div id="map-card" class="map-card">
+        <h3>Directions to Vurve - The Bond</h3>
+        <div class="map-container">
+          <!-- You can replace the link with a static image or embed a map -->
+          <iframe src="https://www.google.com/maps/embed/v1/place?q=Casablanca,Maroc&key=YOUR_API_KEY" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <!-- Reschedule Popup -->
+      <div id="reschedule-popup" class="reschedule-popup">
+        <div class="reschedule-content">
+          <h2>Reschedule Your Appointment</h2>
+          <input type="datetime-local" id="new-appointment-time" />
+          <button id="confirm-reschedule">Confirm</button>
+          <button id="close-reschedule-popup">Cancel</button>
         </div>
       </div>
     </div>
-    <script>
-      // Gestion de UL SIDEBAR **********************************************************************
-      document.querySelectorAll(".page .sidebar ul li a").forEach((li) => {
-        li.addEventListener("click", function () {
-          console.log(li);
-          // Remove the red border from all images first
-          document
-            .querySelectorAll(".page .sidebar ul li a")
-            .forEach((e) => e.classList.remove("active"));
-          // Add red border to clicked image
-          li.classList.add("active");
-        });
-      });
-    </script>
-  </body>
+  </div>
+
+  <script>
+// Function to open Google Maps with Directions to Casablanca, Morocco (Maarif)
+    function openMap() {
+            const mapUrl = "https://www.google.com/maps/dir/?api=1&destination=Casablanca+Maarif,+Morocco";
+            window.open(mapUrl, "_blank");
+        }
+    // Open Reschedule Popup
+    document.getElementById('reschedule-btn').addEventListener('click', function() {
+      document.getElementById('reschedule-popup').style.display = 'block';
+    });
+
+    // Close Reschedule Popup
+    document.getElementById('close-reschedule-popup').addEventListener('click', function() {
+      document.getElementById('reschedule-popup').style.display = 'none';
+    });
+
+    // Confirm Reschedule and Update Appointment Time
+    document.getElementById('confirm-reschedule').addEventListener('click', function() {
+      var newTime = document.getElementById('new-appointment-time').value;
+      if (newTime) {
+        // Update the appointment time in the details section
+        var newDate = new Date(newTime);
+        var formattedTime = newDate.toLocaleString('en-US', { weekday: 'short', day: 'numeric', month: 'long', year: 'numeric', hour: 'numeric', minute: 'numeric' });
+        document.getElementById('appointment-time').textContent = formattedTime;
+        document.getElementById('appointment-time-details').textContent = formattedTime;
+      }
+      // Close the popup after rescheduling
+      document.getElementById('reschedule-popup').style.display = 'none';
+    });
+    // Get elementsy
+    const cancelButton = document.querySelector('.cancel-button');
+    const cancelPopup = document.querySelector('.cancel-popup');
+    const closePopupButton = document.querySelector('.close-popup');
+    const confirmCancelButton = document.querySelector('.confirm-cancel');
+    const appointmentDetails = document.querySelector('.booking-details');
+    const appointmentSidebar = document.querySelector('.appointment-item');
+
+    // Show the popup when "Cancel" button is clicked
+    cancelButton.addEventListener('click', () => {
+      cancelPopup.style.display = 'flex';
+    });
+
+    // Hide the popup if "No, Keep" button is clicked
+    closePopupButton.addEventListener('click', () => {
+      cancelPopup.style.display = 'none';
+    });
+
+    // Confirm cancellation and remove appointment details
+    confirmCancelButton.addEventListener('click', () => {
+      // Hide both the appointment details and sidebar items
+      appointmentDetails.style.display = 'none';
+      appointmentSidebar.style.display = 'none';
+      cancelPopup.style.display = 'none';
+    });
+
+  </script>
+</body>
 </html>
