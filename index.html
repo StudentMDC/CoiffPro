@@ -54,7 +54,112 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    
+    <style>
+      /*START Classes to be added to style of tailwind  ##################################################################################*/
+      .p10 {
+        padding: 10px;
+      }
+      .gap--10 {
+        gap: 10px;
+      }
+      .text-main-color {
+        color: var(--main-color);
+      }
+      .c-user {
+        color: var(--main-color);
+        font-weight: 600;
+      }
+      .bg-main-color {
+        background-color: var(--main-color);
+      }
+      .text-var {
+        color: var(--main-color);
+      }
+      .bg-var {
+        background-color: var(--main-color);
+      }
+      .g-10 {
+        gap: 10px;
+      }
+      .gap--20 {
+        gap: 20pxo;
+      }
+      .h--80 {
+        height: 80px;
+      }
+      .g-15 {
+        gap: 15px;
+      }
+      .fs-10 {
+        font-size: 10px;
+      }
+      .fs-13 {
+        font-size: 13px;
+      }
+      .fs-14 {
+        font-size: 14px;
+      }
+      .fs-10 {
+        font-size: 10px;
+      }
+      .fs-12 {
+        font-size: 12px;
+      }
+      .fs-15 {
+        font-size: 15px;
+      }
+      .fs-18 {
+        font-size: 18px;
+      }
+      .fs-20 {
+        font-size: 20px;
+      }
+      .fs-32 {
+        font-size: 32px;
+      }
+      .fs-24 {
+        font-size: 24px;
+      }
+      .mt--5 {
+        margin-top: 5px;
+      }
+      .mt--10 {
+        margin-top: 10px;
+      }
+      .mt-45 {
+        margin-top: 45px;
+      }
+      .mt-100 {
+        margin-top: 100px;
+      }
+      .mt-120 {
+        margin-top: 120px;
+      }
+      .gap-30 {
+        gap: 30px;
+      }
+      .p--20 {
+        padding: 20px;
+      }
+      .p--10 {
+        padding: 10px;
+      }
+      .p--15 {
+        padding: 15px;
+      }
+      .mt-22 {
+        margin-top: 22px;
+      }
+      .mt--20 {
+        margin-top: 20px;
+      }
+      .mb--20 {
+        margin-bottom: 20px;
+      }
+      .ml-15 {
+        margin-left: 15px;
+      }
+    </style>
   </head>
   <body>
 
@@ -127,9 +232,9 @@
     <!-- END Landing -->
     
     <!-- START Discover -->
-    <div id="discover" class="discover">
-      <div class="wrapper">
-        <div id="filter-banner">
+    <div id="discover" class="min-h-screen bg-cover relative">
+      <div class="wrapper flex justify-between items-center">
+        <div id="filter-banner" class="self-start bg-main-color sticky top-0 overflow-y-auto box-border">
           <div class="search flex justify-start flex-wrap items-center gap--10">
             <i
             class="fa-solid fa-magnifying-glass fa-lg"
@@ -140,106 +245,106 @@
           <div class="filters flex-col flex justify-center items-center gap-2">
             <h2 class="poppins-bold fs-32 self-start">Filters</h2>
             <div
-              class="w-full filter-box popular flex justify-center gap-2 items-center"
+              class="w-full filter-box cursor-pointer relative popular flex justify-center gap-2 items-center"
             >
               <i class="fa-solid fa-fire" style="color: #000000"></i>
               <h3 class="poppins-medium fs-15 text-black">Popular</h3>
-              <img hidden src="imgs/Check.png" alt="">
+              <img hidden class="absolute" src="imgs/Check.png" alt="">
             </div>
             <div
-              class="w-full filter-box localisation bg-slate-100 flex gap-2 justify-center items-center"
+              class="w-full filter-box cursor-pointer relative localisation bg-slate-100 flex gap-2 justify-center items-center"
             >
               <i class="fa-solid fa-location-dot" style="color: #000000"></i>
               <h3 class="poppins-medium fs-15 text-black">Localisation</h3>
-              <img hidden src="imgs/Check.png" alt="">
+              <img hidden class="absolute" src="imgs/Check.png" alt="">
             </div>
             <div
-              class="w-full filter-box hightolow flex justify-center gap-2 items-center"
+              class="w-full filter-box cursor-pointer relative hightolow flex justify-center gap-2 items-center"
             >
               <i
                 class="fa-solid fa-arrow-trend-down"
                 style="color: #000000"
               ></i>
               <h3 class="poppins-medium fs-15 text-black">Price Low to High</h3>
-              <img hidden src="imgs/Check.png" alt="">
+              <img hidden class="absolute" src="imgs/Check.png" alt="">
             </div>
             <div
-              class="w-full filter-box lowtohigh flex justify-center gap-2 items-center"
+              class="w-full filter-box cursor-pointer relative lowtohigh flex justify-center gap-2 items-center"
             >
               <i class="fa-solid fa-arrow-trend-up" style="color: #000000"></i>
               <h3 class="poppins-medium fs-15 text-black">Price High to Low</h3>
-              <img hidden src="imgs/Check.png" alt="">
+              <img hidden class="absolute" src="imgs/Check.png" alt="">
             </div>
             <div class="self-start raleway-bold price-txt">Price</div>
-            <div class="slider-range">
-              <div class="price-range-slider slider">
-                <div class="slider-track"></div>
-                <div class="slider-handle slider-handle-lower"></div>
-                <div class="slider-handle slider-handle-upper"></div>
+            <div class="slider-range text-center">
+              <div class="price-range-slider relative w-full bg-white slider">
+                <div class="slider-track absolute h-full bg-black"></div>
+                <div class="slider-handle absolute bg-black cursor-pointer slider-handle-lower"></div>
+                <div class="slider-handle absolute bg-black cursor-pointer slider-handle-upper"></div>
               </div>
-              <div class="slider-range__prices">
-                <div class="slider-range__prices-lower raleway-medium">MAD <span>0</span></div>
-                <div class="slider-range__prices-upper raleway-medium">MAD <span>2643</span></div>
+              <div class="slider-range__prices flex justify-between">
+                <div class="slider-range__prices-lower raleway-medium font-bold">MAD <span>0</span></div>
+                <div class="slider-range__prices-upper raleway-medium font-bold">MAD <span>2643</span></div>
               </div>
             </div>
             <div class="g-10 buttons flex justify-start items-center">
-              <a class="clear">Clear</a>
-              <a href="#">Apply</a>
+              <a class="clear block w-fit border border-black text-black font-bold transition-[var(--main-transition)]">Clear</a>
+              <a href="#" class="text-white bg-black">Apply</a>
             </div>
           </div>
         </div>
-        <div class="info-section">
-          <div class="slide-filter">
+        <div class="info-section flex-grow bg-white min-h-screen mx-auto text-center items-center relative overflow-visible">
+          <div class="slide-filter hidden overflow-hidden">
             <div class="filters flex-col flex justify-center items-center gap-2">
               <img class="close self-end mt--10 cursor-pointer" src="imgs/Close.png" alt="">
               <h2 class="poppins-bold fs-32 self-start mt--10 text-white mb-2">Filters</h2>
               <div
-                class="w-full filter-box popular flex justify-center gap-2 items-center"
+                class="w-full filter-box cursor-pointer relative popular flex justify-center gap-2 items-center"
               >
                 <i class="fa-solid fa-fire" style="color: #000000"></i>
                 <h3 class="poppins-medium fs-15 text-black">Popular</h3>
-                <img hidden src="imgs/Check.png" alt="">
+                <img hidden class="absolute" src="imgs/Check.png" alt="">
               </div>
               <div
-                class="w-full filter-box localisation bg-slate-100 flex justify-center gap-2 items-center"
+                class="w-full filter-box cursor-pointer relative localisation bg-slate-100 flex justify-center gap-2 items-center"
               >
                 <i class="fa-solid fa-location-dot" style="color: #000000"></i>
                 <h3 class="poppins-medium fs-15 text-black">Localisation</h3>
-                <img hidden src="imgs/Check.png" alt="">
+                <img hidden class="absolute" src="imgs/Check.png" alt="">
               </div>
               <div
-                class="w-full filter-box hightolow flex justify-center gap-2 items-center"
+                class="w-full filter-box cursor-pointer relative hightolow flex justify-center gap-2 items-center"
               >
                 <i
                   class="fa-solid fa-arrow-trend-down"
                   style="color: #000000"
                 ></i>
                 <h3 class="poppins-medium fs-15 text-black">Price Low to High</h3>
-                <img hidden src="imgs/Check.png" alt="">
+                <img hidden class="absolute" src="imgs/Check.png" alt="">
               </div>
               <div
-                class="w-full filter-box lowtohigh flex justify-center gap-2 items-center"
+                class="w-full filter-box cursor-pointer relative lowtohigh flex justify-center gap-2 items-center"
               >
                 <i class="fa-solid fa-arrow-trend-up" style="color: #000000"></i>
                 <h3 class="poppins-medium fs-15 text-black">Price High to Low</h3>
-                <img hidden src="imgs/Check.png" alt="">
+                <img hidden class="absolute" src="imgs/Check.png" alt="">
               </div>
               <div class="self-start raleway-bold price-txt mt-22">Price</div>
-              <div class="slider-range">
-                <div class="price-range-slider second-slider">
-                  <div class="slider-track"></div>
-                  <div class="slider-handle slider-handle-lower-second"></div>
-                  <div class="slider-handle slider-handle-upper-second"></div>
+              <div class="slider-range text-center">
+                <div class="price-range-slider relative w-full bg-white second-slider">
+                  <div class="slider-track absolute h-full bg-black"></div>
+                  <div class="slider-handle absolute bg-black cursor-pointer slider-handle-lower-second"></div>
+                  <div class="slider-handle absolute bg-black cursor-pointer slider-handle-upper-second"></div>
                 </div>
-                <div class="slider-range__prices">
-                  <div class="slider-range__prices-lower raleway-medium">MAD <span>0</span></div>
-                  <div class="slider-range__prices-upper raleway-medium">MAD <span>2643</span></div>
+                <div class="slider-range__prices text-white flex justify-between">
+                  <div class="slider-range__prices-lower raleway-medium font-bold">MAD <span>0</span></div>
+                  <div class="slider-range__prices-upper raleway-medium font-bold">MAD <span>2643</span></div>
                 </div>
               </div>
             </div>
             <div class="buttons flex-wrap flex justify-center g-15 items-center p10">
-              <a class="clear">Clear</a>
-              <a href="#">Apply</a>
+              <a class="clear block w-fit border border-black text-black font-bold transition-[var(--main-transition)]">Clear</a>
+              <a href="#" class="text-white bg-black">Apply</a>
             </div>
           </div>
           <h2 class="special-heading">discover</h2>          
@@ -255,199 +360,199 @@
           </div>
           <br>
           <img class="arrow left-arrow" src="imgs/left.png">
-          <div class="services">
+          <div class="services grid">
 
-            <div class="cercle poppins-bold flex-col flex justify-center items-center gap-0">
-              <img decoding="async" class="img-services" src="imgs/2.jpg" alt="" />
+            <div class="cercle w-fit mx-auto poppins-bold flex-col flex justify-center items-center gap-0">
+              <img decoding="async" class="img-services inline-block relative " src="imgs/2.jpg" alt="" />
               <h5 class="fs-20 raleway-bold text-black  ">Hair</h5>
             </div>
-            <div class="cercle poppins-bold flex-col flex justify-center items-center gap-0">
-              <img decoding="async" class="img-services" src="imgs/BeardTrim_Clean.jfif" alt="" />
+            <div class="cercle w-fit mx-auto poppins-bold flex-col flex justify-center items-center gap-0">
+              <img decoding="async" class="img-services inline-block relative " src="imgs/BeardTrim_Clean.jfif" alt="" />
               <h5 class="fs-20 raleway-bold text-black  ">Beard</h5>
             </div>
-            <div class="cercle poppins-bold flex-col flex justify-center items-center gap-0">
-              <img decoding="async" class="img-services" src="imgs/bleaching.jpg" alt="" />
+            <div class="cercle w-fit mx-auto poppins-bold flex-col flex justify-center items-center gap-0">
+              <img decoding="async" class="img-services inline-block relative " src="imgs/bleaching.jpg" alt="" />
               <h5 class="fs-20 raleway-bold text-black  ">Bleach</h5>
             </div>
-            <div class="cercle poppins-bold flex-col flex justify-center items-center gap-0">
-              <img decoding="async" class="img-services" src="imgs/facial.png" alt="" />
+            <div class="cercle w-fit mx-auto poppins-bold flex-col flex justify-center items-center gap-0">
+              <img decoding="async" class="img-services inline-block relative " src="imgs/facial.png" alt="" />
               <h5 class="fs-20 raleway-bold text-black  ">Facials</h5>
             </div>
-            <div class="cercle poppins-bold flex-col flex justify-center items-center gap-0">
-              <img decoding="async" class="img-services" src="imgs/pack.jfif" alt="" />
+            <div class="cercle w-fit mx-auto poppins-bold flex-col flex justify-center items-center gap-0">
+              <img decoding="async" class="img-services inline-block relative " src="imgs/pack.jfif" alt="" />
               <h5 class="fs-20 raleway-bold text-black  ">Packs</h5>
             </div>
           </div>
           <img class="arrow right-arrow" src="imgs/right.png">
 
 
-          <div class="boxes">
-            <div class="box">
-              <div class="image">
-                <img decoding="async" src="imgs/FAC.jpg" alt="" />
+          <div class="boxes grid overflow-y-auto">
+            <div class="box bg-white overflow-hidden relative">
+              <div class="image overflow-hidden">
+                <img decoding="async" class="w-full" src="imgs/FAC.jpg" alt="" />
               </div>
               <a class="appointment" href="makeappointement.html"><button class="poppins-semibold">make an appointment</button></a>
-              <div class="flex content">
+              <div class="g--30 content flex items-center justify-around text-black">
                 <img src="imgs/logo2.jpg" alt="" />
-                <div class="flex-column text-left">
-                  <h3 class="fs-18 raleway-bold">Salon-Quality Hair Curling...</h3>
-                  <p class="fs-12 raleway-bold">bob the barber</p>
+                <div class="flex-column flex flex-col justify-center items-start text-left">
+                  <h3 class="m-0 mb-0 fs-18 raleway-bold">Salon-Quality Hair Curling...</h3>
+                  <p class="mt-0 fs-12 raleway-bold">bob the barber</p>
                   <h4 class="fs-24 raleway-bold">MAD 60</h4>
                 </div>
               </div>
-              <div class="info text-black">
-                <ul class="shuffle poppins-bold fs-10 gap-1 flex-wrap">
-                  <li>Hair Trimming</li>
-                  <li>Hair</li>
+              <div class="info text-black flex items-center justify-between">
+                <ul class="shuffle flex justify-center poppins-bold fs-10 gap-1 flex-wrap">
+                  <li class="text-var">Hair Trimming</li>
+                  <li class="text-var">Hair</li>
                 </ul>
-                <i class="fas fa-long-arrow-alt-right"></i>
+                <i class="text-var fas fa-long-arrow-alt-right"></i>
               </div>
             </div>
-            <div class="box">
-              <div class="image">
-                <img decoding="async" src="imgs/shampoo.jpg" alt="" />
+            <div class="box bg-white overflow-hidden relative">
+              <div class="image overflow-hidden">
+                <img decoding="async" class="w-full" src="imgs/shampoo.jpg" alt="" />
               </div>
               <a class="appointment" href="makeappointement.html"><button class="poppins-semibold">make an appointment</button></a>
-              <div class="flex content">
+              <div class="g--30 content flex items-center justify-around text-black">
                 <img src="imgs/logo4.jpg" alt="" />
-                <div class="flex-column text-left">
-                  <h3 class="fs-18 raleway-bold">Salon-Quality Hair Curling...</h3>
-                  <p class="fs-12 raleway-bold">bob the barber</p>
+                <div class="flex-column flex flex-col justify-center items-start text-left text-left">
+                  <h3 class="m-0 mb-0 fs-18 raleway-bold">Salon-Quality Hair Curling...</h3>
+                  <p class="mt-0 fs-12 raleway-bold">bob the barber</p>
                   <h4 class="fs-24 raleway-bold">MAD 60</h4>
                 </div>
               </div>
-              <div class="info text-black">
-                <ul class="shuffle poppins-bold fs-10 gap-1 flex-wrap">
-                  <li>Hair Trimming</li>
-                  <li>Hair</li>
+              <div class="info text-black flex items-center justify-between">
+                <ul class="shuffle flex justify-center poppins-bold fs-10 gap-1 flex-wrap">
+                  <li class="text-var">Hair Trimming</li>
+                  <li class="text-var">Hair</li>
                 </ul>
-                <i class="fas fa-long-arrow-alt-right"></i>
+                <i class="text-var fas fa-long-arrow-alt-right"></i>
               </div>
             </div>
-            <div class="box">
-              <div class="image">
-                <img decoding="async" src="imgs/1.jpg" alt="" />
+            <div class="box bg-white overflow-hidden relative">
+              <div class="image overflow-hidden">
+                <img decoding="async" class="w-full" src="imgs/1.jpg" alt="" />
               </div>
               <a class="appointment" href="makeappointement.html"><button class="poppins-semibold">make an appointment</button></a>
-              <div class="flex content">
+              <div class="g--30 content flex items-center justify-around text-black">
                 <img src="imgs/logo1.jpg" alt="" />
-                <div class="flex-column text-left">
-                  <h3 class="fs-18 raleway-bold">Salon-Quality Hair Curling...</h3>
-                  <p class="fs-12 raleway-bold">bob the barber</p>
+                <div class="flex-column flex flex-col justify-center items-start text-left text-left">
+                  <h3 class="m-0 mb-0 fs-18 raleway-bold">Salon-Quality Hair Curling...</h3>
+                  <p class="mt-0 fs-12 raleway-bold">bob the barber</p>
                   <h4 class="fs-24 raleway-bold">MAD 60</h4>
                 </div>
               </div>
-              <div class="info text-black">
-                <ul class="shuffle poppins-bold fs-10 gap-1 flex-wrap">
-                  <li>Hair Trimming</li>
-                  <li>Hair</li>
+              <div class="info text-black flex items-center justify-between">
+                <ul class="shuffle flex justify-center poppins-bold fs-10 gap-1 flex-wrap">
+                  <li class="text-var">Hair Trimming</li>
+                  <li class="text-var">Hair</li>
                 </ul>
-                <i class="fas fa-long-arrow-alt-right"></i>
+                <i class="text-var fas fa-long-arrow-alt-right"></i>
               </div>
             </div>
-            <div class="box">
-              <div class="image">
-                <img decoding="async" src="imgs/mask.jpg" alt="" />
+            <div class="box bg-white overflow-hidden relative">
+              <div class="image overflow-hidden">
+                <img decoding="async" class="w-full" src="imgs/mask.jpg" alt="" />
               </div>
               <a class="appointment" href="makeappointement.html"><button class="poppins-semibold">make an appointment</button></a>
-              <div class="flex content">
+              <div class="g--30 content flex items-center justify-around text-black">
                 <img src="imgs/logo4.jpg" alt="" />
-                <div class="flex-column text-left">
-                  <h3 class="fs-18 raleway-bold">Salon-Quality Hair Curling...</h3>
-                  <p class="fs-12 raleway-bold">bob the barber</p>
+                <div class="flex-column flex flex-col justify-center items-start text-left text-left">
+                  <h3 class="m-0 mb-0 fs-18 raleway-bold">Salon-Quality Hair Curling...</h3>
+                  <p class="mt-0 fs-12 raleway-bold">bob the barber</p>
                   <h4 class="fs-24 raleway-bold">MAD 60</h4>
                 </div>
               </div>
-              <div class="info text-black">
-                <ul class="shuffle poppins-bold fs-10 gap-1 flex-wrap">
-                  <li>Hair Trimming</li>
-                  <li>Hair</li>
+              <div class="info text-black flex items-center justify-between">
+                <ul class="shuffle flex justify-center poppins-bold fs-10 gap-1 flex-wrap">
+                  <li class="text-var">Hair Trimming</li>
+                  <li class="text-var">Hair</li>
                 </ul>
-                <i class="fas fa-long-arrow-alt-right"></i>
+                <i class="text-var fas fa-long-arrow-alt-right"></i>
               </div>
             </div>
-            <div class="box">
-              <div class="image">
-                <img decoding="async" src="imgs/p.jpg" alt="" />
+            <div class="box bg-white overflow-hidden relative">
+              <div class="image overflow-hidden">
+                <img decoding="async" class="w-full" src="imgs/p.jpg" alt="" />
               </div>
               <a class="appointment" href="makeappointement.html"><button class="poppins-semibold">make an appointment</button></a>
-              <div class="flex content">
+              <div class="g--30 content flex items-center justify-around text-black">
                 <img src="imgs/logo2.jpg" alt="" />
-                <div class="flex-column text-left">
-                  <h3 class="fs-18 raleway-bold">Salon-Quality Hair Curling...</h3>
-                  <p class="fs-12 raleway-bold">bob the barber</p>
+                <div class="flex-column flex flex-col justify-center items-start text-left text-left">
+                  <h3 class="m-0 mb-0 fs-18 raleway-bold">Salon-Quality Hair Curling...</h3>
+                  <p class="mt-0 fs-12 raleway-bold">bob the barber</p>
                   <h4 class="fs-24 raleway-bold">MAD 60</h4>
                 </div>
               </div>
-              <div class="info text-black">
-                <ul class="shuffle poppins-bold fs-10 gap-1 flex-wrap">
-                  <li>Hair Trimming</li>
-                  <li>Hair</li>
+              <div class="info text-black flex items-center justify-between">
+                <ul class="shuffle flex justify-center poppins-bold fs-10 gap-1 flex-wrap">
+                  <li class="text-var">Hair Trimming</li>
+                  <li class="text-var">Hair</li>
                 </ul>
-                <i class="fas fa-long-arrow-alt-right"></i>
+                <i class="text-var fas fa-long-arrow-alt-right"></i>
               </div>
             </div>
-            <div class="box">
-              <div class="image">
-                <img decoding="async" src="imgs/3.jpg" alt="" />
+            <div class="box bg-white overflow-hidden relative">
+              <div class="image overflow-hidden">
+                <img decoding="async" class="w-full" src="imgs/3.jpg" alt="" />
               </div>
               <a class="appointment" href="makeappointement.html"><button class="poppins-semibold">make an appointment</button></a>
-              <div class="flex content">
+              <div class="g--30 content flex items-center justify-around text-black">
                 <img src="imgs/logo4.jpg" alt="" />
-                <div class="flex-column text-left">
-                  <h3 class="fs-18 raleway-bold">Salon-Quality Hair Curling...</h3>
-                  <p class="fs-12 raleway-bold">bob the barber</p>
+                <div class="flex-column flex flex-col justify-center items-start text-left text-left">
+                  <h3 class="m-0 mb-0 fs-18 raleway-bold">Salon-Quality Hair Curling...</h3>
+                  <p class="mt-0 fs-12 raleway-bold">bob the barber</p>
                   <h4 class="fs-24 raleway-bold">MAD 60</h4>
                 </div>
               </div>
-              <div class="info text-black">
-                <ul class="shuffle poppins-bold fs-10 gap-1 flex-wrap">
-                  <li>Hair Trimming</li>
-                  <li>Hair</li>
+              <div class="info text-black flex items-center justify-between">
+                <ul class="shuffle flex justify-center poppins-bold fs-10 gap-1 flex-wrap">
+                  <li class="text-var">Hair Trimming</li>
+                  <li class="text-var">Hair</li>
                 </ul>
-                <i class="fas fa-long-arrow-alt-right"></i>
+                <i class="text-var fas fa-long-arrow-alt-right"></i>
               </div>
             </div>
-            <div class="box">
-              <div class="image">
-                <img decoding="async" src="imgs/m.jpg" alt="" />
+            <div class="box bg-white overflow-hidden relative">
+              <div class="image overflow-hidden">
+                <img decoding="async" class="w-full" src="imgs/m.jpg" alt="" />
               </div>
               <a class="appointment" href="makeappointement.html"><button class="poppins-semibold">make an appointment</button></a>
-              <div class="flex content">
+              <div class="g--30 content flex items-center justify-around text-black">
                 <img src="imgs/logo1.jpg" alt="" />
-                <div class="flex-column text-left">
-                  <h3 class="fs-18 raleway-bold">Salon-Quality Hair Curling...</h3>
-                  <p class="fs-12 raleway-bold">bob the barber</p>
+                <div class="flex-column flex flex-col justify-center items-start text-left text-left">
+                  <h3 class="m-0 mb-0 fs-18 raleway-bold">Salon-Quality Hair Curling...</h3>
+                  <p class="mt-0 fs-12 raleway-bold">bob the barber</p>
                   <h4 class="fs-24 raleway-bold">MAD 60</h4>
                 </div>
               </div>
-              <div class="info text-black">
-                <ul class="shuffle poppins-bold fs-10 gap-1 flex-wrap">
-                  <li>Hair Trimming</li>
-                  <li>Hair</li>
+              <div class="info text-black flex items-center justify-between">
+                <ul class="shuffle flex justify-center poppins-bold fs-10 gap-1 flex-wrap">
+                  <li class="text-var">Hair Trimming</li>
+                  <li class="text-var">Hair</li>
                 </ul>
-                <i class="fas fa-long-arrow-alt-right"></i>
+                <i class="text-var fas fa-long-arrow-alt-right"></i>
               </div>
             </div>
-            <div class="box">
-              <div class="image">
-                <img decoding="async" src="imgs/5.jpg" alt="" />
+            <div class="box bg-white overflow-hidden relative">
+              <div class="image overflow-hidden">
+                <img decoding="async" class="w-full" src="imgs/5.jpg" alt="" />
               </div>
               <a class="appointment" href="makeappointement.html"><button class="poppins-semibold">make an appointment</button></a>
-              <div class="flex content">
+              <div class="content flex items-center justify-around text-black">
                 <img src="imgs/logo4.jpg" alt="" />
-                <div class="flex-column text-left">
-                  <h3 class="fs-18 raleway-bold">Salon-Quality Hair Curling...</h3>
-                  <p class="fs-12 raleway-bold">bob the barber</p>
+                <div class="flex-column flex flex-col justify-center items-start text-left text-left">
+                  <h3 class="m-0 mb-0 fs-18 raleway-bold">Salon-Quality Hair Curling...</h3>
+                  <p class="mt-0 fs-12 raleway-bold">bob the barber</p>
                   <h4 class="fs-24 raleway-bold">MAD 60</h4>
                 </div>
               </div>
-              <div class="info text-black">
-                <ul class="shuffle poppins-bold fs-10 gap-1 flex-wrap">
-                  <li>Hair Trimming</li>
-                  <li>Hair</li>
+              <div class="info text-black flex items-center justify-between">
+                <ul class="shuffle flex justify-center poppins-bold fs-10 gap-1 flex-wrap">
+                  <li class="text-var">Hair Trimming</li>
+                  <li class="text-var">Hair</li>
                 </ul>
-                <i class="fas fa-long-arrow-alt-right"></i>
+                <i class="text-var fas fa-long-arrow-alt-right"></i>
               </div>
             </div>
           </div>
@@ -458,108 +563,105 @@
     
 
     <!-- START Testimonials -->
-    <div id="testimonials" class="testimonials">
-      <h2 class="special-heading">Testimonials</h2>
+    <div id="testimonials" class="testimonials min-h-screen flex flex-col items-center justify-center text-white text-center bg-cover bg-center">
+      <h2 class="special-heading text-white">Testimonials</h2>
       <p>Find out what our clients think about the service they received from us. Let us know what you think by rating us on the Play Store and App Store.</p>
 
-      <!-- Carousel container -->
-      <div class="owl-carousel testimonials-container">
-        <!-- Six testimonial cards for demonstration -->
-        <div class="testimonial-card">
-          <div class="testimonial-header">
+      <div class="owl-carousel testimonials-container flex justify-center flex-wrap">
+        <div class="testimonial-card inline-block bg-white">
+          <div class="testimonial-header flex items-center">
             <img src="imgs/testi.png" alt="Profile Image" class="profile-img">
             <div class="profile-details text-left">
-              <h3>Leo</h3>
-              <span class="role">Lead Designer</span>
+              <h3 class="m-0 font-bold">Leo</h3>
+              <span class="role m-0">Lead Designer</span>
             </div>
             <div class="rating">★★★★☆</div>
           </div>
-          <h4>It was a very good experience</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem unde fugit error sint, consequuntur ducimus in veritatis voluptates ex voluptas explicabo magnam cupiditate esse distinctio aliquid necessitatibus quo, recusandae, omnis reiciendis consequatur deserunt soluta accusamus?</p>
+          <h4 class="font-bold">It was a very good experience</h4>
+          <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem unde fugit error sint, consequuntur ducimus in veritatis voluptates ex voluptas explicabo magnam cupiditate esse distinctio aliquid necessitatibus quo, recusandae, omnis reiciendis consequatur deserunt soluta accusamus?</p>
         </div>
         
 
-        <div class="testimonial-card">
-          <div class="testimonial-header">
+        <div class="testimonial-card inline-block bg-white">
+          <div class="testimonial-header flex items-center">
             <img src="imgs/testi.png" alt="Profile Image" class="profile-img">
             <div class="profile-details text-left">
-              <h3>Leo</h3>
-              <span class="role">Lead Designer</span>
+              <h3 class="m-0 font-bold">Leo</h3>
+              <span class="role m-0">Lead Designer</span>
             </div>
             <div class="rating">★★★★☆</div>
           </div>
-          <h4>It was a very good experience</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem unde fugit error sint, consequuntur ducimus in veritatis voluptates ex voluptas explicabo magnam cupiditate esse distinctio aliquid necessitatibus quo, recusandae, omnis reiciendis consequatur deserunt soluta accusamus?</p>
+          <h4 class="font-bold">It was a very good experience</h4>
+          <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem unde fugit error sint, consequuntur ducimus in veritatis voluptates ex voluptas explicabo magnam cupiditate esse distinctio aliquid necessitatibus quo, recusandae, omnis reiciendis consequatur deserunt soluta accusamus?</p>
         </div>
         
 
-        <div class="testimonial-card">
-          <div class="testimonial-header">
+        <div class="testimonial-card inline-block bg-white">
+          <div class="testimonial-header flex items-center">
             <img src="imgs/testi.png" alt="Profile Image" class="profile-img">
             <div class="profile-details text-left">
-              <h3>Leo</h3>
-              <span class="role">Lead Designer</span>
+              <h3 class="m-0 font-bold">Leo</h3>
+              <span class="role m-0">Lead Designer</span>
             </div>
             <div class="rating">★★★★☆</div>
           </div>
-          <h4>It was a very good experience</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem unde fugit error sint, consequuntur ducimus in veritatis voluptates ex voluptas explicabo magnam cupiditate esse distinctio aliquid necessitatibus quo, recusandae, omnis reiciendis consequatur deserunt soluta accusamus?</p>
+          <h4 class="font-bold">It was a very good experience</h4>
+          <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem unde fugit error sint, consequuntur ducimus in veritatis voluptates ex voluptas explicabo magnam cupiditate esse distinctio aliquid necessitatibus quo, recusandae, omnis reiciendis consequatur deserunt soluta accusamus?</p>
         </div>
         
 
-        <div class="testimonial-card">
-          <div class="testimonial-header">
+        <div class="testimonial-card inline-block bg-white">
+          <div class="testimonial-header flex items-center">
             <img src="imgs/testi.png" alt="Profile Image" class="profile-img">
             <div class="profile-details text-left">
-              <h3>Leo</h3>
-              <span class="role">Lead Designer</span>
+              <h3 class="m-0 font-bold">Leo</h3>
+              <span class="role m-0">Lead Designer</span>
             </div>
             <div class="rating">★★★★☆</div>
           </div>
-          <h4>It was a very good experience</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem unde fugit error sint, consequuntur ducimus in veritatis voluptates ex voluptas explicabo magnam cupiditate esse distinctio aliquid necessitatibus quo, recusandae, omnis reiciendis consequatur deserunt soluta accusamus?</p>
+          <h4 class="font-bold">It was a very good experience</h4>
+          <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem unde fugit error sint, consequuntur ducimus in veritatis voluptates ex voluptas explicabo magnam cupiditate esse distinctio aliquid necessitatibus quo, recusandae, omnis reiciendis consequatur deserunt soluta accusamus?</p>
         </div>
         
 
-        <div class="testimonial-card">
-          <div class="testimonial-header">
+        <div class="testimonial-card inline-block bg-white">
+          <div class="testimonial-header flex items-center">
             <img src="imgs/testi.png" alt="Profile Image" class="profile-img">
             <div class="profile-details text-left">
-              <h3>Leo</h3>
-              <span class="role">Lead Designer</span>
+              <h3 class="m-0 font-bold">Leo</h3>
+              <span class="role m-0">Lead Designer</span>
             </div>
             <div class="rating">★★★★☆</div>
           </div>
-          <h4>It was a very good experience</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem unde fugit error sint, consequuntur ducimus in veritatis voluptates ex voluptas explicabo magnam cupiditate esse distinctio aliquid necessitatibus quo, recusandae, omnis reiciendis consequatur deserunt soluta accusamus?</p>
+          <h4 class="font-bold">It was a very good experience</h4>
+          <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem unde fugit error sint, consequuntur ducimus in veritatis voluptates ex voluptas explicabo magnam cupiditate esse distinctio aliquid necessitatibus quo, recusandae, omnis reiciendis consequatur deserunt soluta accusamus?</p>
         </div>
         
 
-        <div class="testimonial-card">
-          <div class="testimonial-header">
+        <div class="testimonial-card inline-block bg-white">
+          <div class="testimonial-header flex items-center">
             <img src="imgs/testi.png" alt="Profile Image" class="profile-img">
             <div class="profile-details text-left">
-              <h3>Leo</h3>
-              <span class="role">Lead Designer</span>
+              <h3 class="m-0 font-bold">Leo</h3>
+              <span class="role m-0">Lead Designer</span>
             </div>
             <div class="rating">★★★★☆</div>
           </div>
-          <h4>It was a very good experience</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem unde fugit error sint, consequuntur ducimus in veritatis voluptates ex voluptas explicabo magnam cupiditate esse distinctio aliquid necessitatibus quo, recusandae, omnis reiciendis consequatur deserunt soluta accusamus?</p>
+          <h4 class="font-bold">It was a very good experience</h4>
+          <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem unde fugit error sint, consequuntur ducimus in veritatis voluptates ex voluptas explicabo magnam cupiditate esse distinctio aliquid necessitatibus quo, recusandae, omnis reiciendis consequatur deserunt soluta accusamus?</p>
         </div>
         
       </div>
 
-      <!-- Custom Navigation -->
-      <div class="testimonial-navigation">
+      <div class="testimonial-navigation flex items-center justify-center">
         <button class="owl-prev"><i class="fas fa-chevron-left"></i></button>
-        <div class="owl-dots">
-          <button class="owl-dot"></button>
-          <button class="owl-dot"></button>
-          <button class="owl-dot"></button>
-          <button class="owl-dot"></button>
-          <button class="owl-dot"></button>
-          <button class="owl-dot"></button>
+        <div class="owl-dots flex justify-center">
+          <button class="owl-dot cursor-pointer"></button>
+          <button class="owl-dot cursor-pointer"></button>
+          <button class="owl-dot cursor-pointer"></button>
+          <button class="owl-dot cursor-pointer"></button>
+          <button class="owl-dot cursor-pointer"></button>
+          <button class="owl-dot cursor-pointer"></button>
         </div>
         <button class="owl-next"><i class="fas fa-chevron-right"></i></button>
       </div>
@@ -567,39 +669,39 @@
     <!-- END Testimonials -->
 
     <!-- START Support -->
-    <div id="support" class="support-container">
-      <div class="support-info">
-        <h2>SUPPORT</h2>
-        <p>Contact our support team if you have any doubts or questions about our service.</p>
+    <div id="support" class="support-container flex flex-wrap w-full min-h-screen justify-start items-center">
+      <div class="support-info box-border text-black">
+        <h2 class="text-black">SUPPORT</h2>
+        <p class="text-black">Contact our support team if you have any doubts or questions about our service.</p>
         <p><strong>Email</strong></p>
         <p>coiffpro@gmail.com</p>
         <p><strong>Socials</strong></p>
-        <div class="social-link">
-          <i class="fab fa-instagram"></i>
-          <a href="#">Instagram</a>
+        <div class="social-link flex items-center text-black ">
+          <i class="font-bold fab fa-instagram"></i>
+          <a href="#" class="underline">Instagram</a>
         </div>
-        <div class="social-link">
-          <i class="fab fa-x-twitter"></i> <!-- Updated icon for Twitter (X) -->
-          <a href="#">Twitter</a>
+        <div class="social-link flex items-center text-black ">
+          <i class="font-bold fab fa-x-twitter"></i> 
+          <a href="#" class="underline">Twitter</a>
         </div>
-        <div class="social-link">
-          <i class="fab fa-facebook"></i>
-          <a href="#">Facebook</a>
+        <div class="social-link flex items-center text-black ">
+          <i class="font-bold fab fa-facebook"></i>
+          <a href="#" class="underline">Facebook</a>
         </div>
       </div>
 
-      <div class="support-form">
+      <div class="support-form box-border">
         <form action="#" method="post">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your name..." required>
+          <label class="block text-black" for="name">Name</label>
+          <input class="w-full" type="text" id="name" name="name" placeholder="Your name..." required>
 
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Your email..." required>
+          <label class="block text-black" for="email">Email</label>
+          <input class="w-full" type="email" id="email" name="email" placeholder="Your email..." required>
 
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4" placeholder="Your message..." required></textarea>
+          <label class="block text-black" for="message">Message</label>
+          <textarea class="w-full" id="message" name="message" rows="4" placeholder="Your message..." required></textarea>
 
-          <button type="submit">Submit</button>
+          <button class="text-white border-none cursor-pointer w-full" type="submit">Submit</button>
         </form>
       </div>
 
@@ -613,42 +715,42 @@
     <!-- END Support -->
 
     <!-- START FAQ -->
-    <div id="faq" class="faq-container">
+    <div id="faq" class="faq-container bg-black text-white text-center">
       <div class="faq-header">
         <h2 class="special-heading text-white">faq</h2>
         <p class="faq-description">
           Have Questions? We’ve Got You Covered! Explore Our Frequently Asked Questions To Find Quick Answers About Bookings, Services, Payments, And More. If You Don’t See What You’re Looking For, Feel Free To Contact Us Directly!
         </p>
       </div>
-      <div class="faq-content">
+      <div class="faq-content flex items-center justify-between flex-wrap">
         <div class="faq-questions mt--10">
-          <div class="faq-item">
-            <div class="faq-question">
+          <div class="faq-item bg-white text-black text-left">
+            <div class="faq-question flex justify-between items-center font-bold">
               How can I make a reservation?
               <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
             </div>
-            <div class="faq-answer">You can make a reservation by...</div>
+            <div class="faq-answer text-black">You can make a reservation by...</div>
           </div>
-          <div class="faq-item">
-            <div class="faq-question">
+          <div class="faq-item bg-white text-black text-left">
+            <div class="faq-question flex justify-between items-center font-bold">
               How can I cancel or modify my appointment?
               <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
             </div>
-            <div class="faq-answer">To cancel or modify your appointment, please...</div>
+            <div class="faq-answer text-black">To cancel or modify your appointment, please...</div>
           </div>
-          <div class="faq-item">
-            <div class="faq-question">
+          <div class="faq-item bg-white text-black text-left">
+            <div class="faq-question flex justify-between items-center font-bold">
               How do I reset my password?
               <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
             </div>
-            <div class="faq-answer">To reset your password, go to the login page and...</div>
+            <div class="faq-answer text-black">To reset your password, go to the login page and...</div>
           </div>
-          <div class="faq-item">
-            <div class="faq-question">
+          <div class="faq-item bg-white text-black text-left">
+            <div class="faq-question flex justify-between items-center font-bold">
               Having trouble logging into your account?
               <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
             </div>
-            <div class="faq-answer">If you're having trouble logging in, try...</div>
+            <div class="faq-answer text-black">If you're having trouble logging in, try...</div>
           </div>
         </div>
         <div class="logo-container">
@@ -660,8 +762,8 @@
     <!-- END FAQ-->
 
     <!-- Start Footer -->
-    <div class="footer">
-      <div class="container">
+    <div class="footer bg-black">
+      <div class="container grid">
         <div class="box">
           <ul class="links">
             <li><a href="#home">HOME</a></li>
@@ -672,42 +774,42 @@
           </ul>
         </div>
         <div class="box">
-          <div class="line">
+          <div class="line flex items-center">
             <i class="fas fa-map-marker-alt fa-fw"></i>
             <div class="info">
               2972 Westheimer Rd. Santa Ana,
               Illinois 85486
             </div>
           </div>
-          <div class="line">
+          <div class="line flex items-center">
             <i class="fa-solid fa-at"></i>
             <div class="info">coiffpro@gmail.com</div>
           </div>
-          <div class="line">
+          <div class="line flex items-center">
             <i class="fas fa-phone-volume fa-fw"></i>
             <div class="info">
-              <span>+1 891 989-11-91</span>
-              <span>+1 891 989-11-95</span>
+              <span class="block">+1 891 989-11-91</span>
+              <span class="block">+1 891 989-11-95</span>
             </div>
           </div>
         </div>
         <div class="box footer-gallery">
             
           <div class="">
-              <i class="fab fa-instagram"></i>
+              <i class="text-var fab fa-instagram"></i>
               <a href="#">Instagram</a>
           </div>
           <div class="">
-              <i class="fab fa-x-twitter"></i>
+              <i class="text-var fab fa-x-twitter"></i>
               <a href="#">Twitter</a>
           </div>
           <div class="">
-              <i class="fab fa-facebook"></i>
+              <i class="text-var fab fa-facebook"></i>
               <a href="#">Facebook</a>
           </div>
         </div>
       </div>
-      <p class="copyright">© 2024 — 2024 Coiff'Pro. All Rights Reserved</p>
+      <p class="copyright text-white text-center">© 2024 — 2024 Coiff'Pro. All Rights Reserved</p>
     </div>
     <!-- End Footer -->
 
@@ -728,7 +830,7 @@
     </script>
 
     <!-- Back to Top Button -->
-    <div class="back-to-top"><i class="fas fa-arrow-up"></i></div>
+    <div class="back-to-top fixed text-white cursor-pointer text-center flex items-center justify-center"><i class="fas fa-arrow-up"></i></div>
       <!-- Custom pagination and navigation -->
     </div>
 
